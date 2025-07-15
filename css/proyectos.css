@@ -1,0 +1,59 @@
+:root {
+    --project-card-radius: 2rem; /* Bordes redondeados de la tarjeta */
+    --project-button-color: #f39c12; /* Naranja/amarillo del botón */
+}
+
+.projects-page {
+    background-color: #000;
+    min-height: 80vh; /* Asegura que ocupe un buen espacio vertical */
+}
+
+.project-card {
+    text-align: center; /* Centra el botón "visitar" */
+    transition: transform 0.3s ease-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Efecto de levantar al pasar el ratón */
+}
+
+/* Contenedor que simula el marco del teléfono */
+.project-image-container {
+    background-color: #1a1a1a; /* Un color de fondo sutil si la imagen no carga */
+    border-radius: var(--project-card-radius);
+    overflow: hidden; /* Esto es clave para que la imagen respete los bordes redondeados */
+    margin-bottom: 1.5rem; /* Espacio entre la imagen y el botón */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    border: 3px solid #222; /* Un borde sutil para definir la forma */
+}
+
+.project-image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacios extra debajo de la imagen */
+}
+
+/* Estilo para el botón "visitar" */
+.btn-visit {
+    background-color: var(--project-button-color) !important;
+    border-color: var(--project-button-color) !important;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px; /* Bordes tipo píldora */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-visit:hover {
+    background-color: blueviolet !important; /* Cambia a blanco en hover */
+    border-color: #7314aa !important;
+    color: #f39c12 !important;
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767.98px) {
+    .project-card {
+        margin-bottom: 2rem; /* Añade espacio extra entre tarjetas en móviles */
+    }
+}

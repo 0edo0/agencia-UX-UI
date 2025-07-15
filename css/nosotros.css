@@ -1,0 +1,141 @@
+/*
+============================================
+ESTILOS MEJORADOS PARA LA PÁGINA "NOSOTROS"
+============================================
+*/
+
+/* --- Variables y Estilos Base --- */
+:root {
+    --color-background: #000000;
+    --color-text-primary: #EAEAEA;
+    --color-text-secondary: #B0B0B0;
+    --color-accent-yellow: #f7b733;
+    --font-script: 'Great Vibes', cursive;
+    --font-sans: Arial, sans-serif;
+}
+
+.page-nosotros {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* --- Estilos de Secciones Comunes --- */
+.section-title {
+    font-family: var(--font-script);
+    font-size: 5.5rem;
+    margin-bottom: 3.5rem;
+    text-align: left;
+    background: linear-gradient(90deg, #9d4edd, #f05a99, #f7b733);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-intro {
+    padding-bottom: 3rem; /* Espacio entre la intro y la sección de equipo */
+}
+
+.about-intro-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-intro-text strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* --- Sección de Equipo --- */
+.team-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.team-card {
+    position: relative;
+    border-radius: 1rem; /* Bordes redondeados consistentes */
+    overflow: hidden; /* Oculta partes de la imagen que se salgan */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.team-card:hover {
+    transform: translateY(-10px); /* Efecto de levantar la tarjeta */
+    box-shadow: 0 25px 50px rgba(190, 0, 0, 0.61);
+}
+
+.team-card-img {
+    width: 100%;
+    height: 510px;
+    aspect-ratio: 1 / 1; /* Asegura que la imagen sea cuadrada */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+.team-card-name {
+    font-family: var(--font-sans);
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 150px; /* Bordes tipo "píldora" */
+    
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%); /* Técnica para centrar perfectamente */
+    
+    width: max-content; /* Se ajusta al ancho del nombre */
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Sección de Ubicación --- */
+.location-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.location-card {
+    background-color: var(--color-accent-yellow);
+    color: #000;
+    padding: 2.5rem;
+    border-radius: 1.5rem; /* Bordes más redondeados */
+    font-size: 1.15rem;
+    line-height: 1.7;
+    height: 100%; /* Para que ocupe la misma altura que el mapa */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+}
+
+/* --- Ajustes Responsivos para Móviles --- */
+@media (max-width: 991.98px) {
+    .page-nosotros {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 4rem;
+        text-align: center; /* Centramos los títulos en móvil */
+        margin-bottom: 2.5rem;
+    }
+
+    .about-intro-text {
+        font-size: 1.1rem;
+    }
+
+    /* En móvil, el texto de ubicación se pondrá sobre el mapa */
+    .location-section .row {
+        flex-direction: column-reverse; 
+    }
+
+    .location-card {
+        margin-top: 2rem; /* Espacio entre el texto y el mapa en móvil */
+    }
+}

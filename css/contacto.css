@@ -1,0 +1,106 @@
+/*
+================================================
+ESTILOS PARA LA PÁGINA DE "CONTACTO"
+================================================
+*/
+
+:root {
+    --contact-form-bg: #f7b733; /* Amarillo del contenedor */
+    --contact-input-bg: #fef8e7; /* Color crema claro para los campos */
+    --contact-button-bg: #5a00ff; /* Morado del botón de envío y de "agendar" */
+}
+
+.contact-page {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.contact-illustration {
+    max-width: 85%;
+    height: auto;
+}
+
+/* Contenedor principal del formulario */
+.contact-form-container {
+    background-color: var(--contact-form-bg);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 40px rgba(247, 183, 51, 0.2);
+}
+
+.contact-form-container .form-label {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo personalizado para todos los campos del formulario */
+.contact-form-container .form-control {
+    background-color: var(--contact-input-bg);
+    border: 2px solid transparent; /* Sin borde por defecto */
+    border-radius: 50px; /* Bordes tipo píldora */
+    padding: 0.8rem 1.2rem;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container .form-control:focus {
+    background-color: #fff;
+    border-color: var(--contact-button-bg); /* Borde morado al hacer foco */
+    box-shadow: 0 0 0 3px rgba(90, 0, 255, 0.25);
+}
+
+/* El campo de 'comentarios' necesita un radio de borde diferente */
+.contact-form-container textarea.form-control {
+    border-radius: 1.5rem; /* Bordes más cuadrados para el área de texto */
+}
+
+/* Botón de Enviar */
+.btn-submit-form {
+    background-color: var(--contact-button-bg) !important;
+    border-color: var(--contact-button-bg) !important;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 0.8rem 3rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit-form:hover {
+    background-color: #4800cc !important; /* Un morado un poco más oscuro */
+    transform: scale(1.05);
+}
+
+/* --- Ajustes Responsivos --- */
+@media (max-width: 991.98px) {
+    .contact-page {
+        padding: 3rem 0;
+        align-items: flex-start;
+    }
+
+    .contact-illustration {
+        max-width: 60%;
+        margin-bottom: 3rem; /* Espacio entre ilustración y formulario en móvil */
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}

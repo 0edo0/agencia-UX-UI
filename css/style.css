@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif; /* Fuente por defecto para el cuerpo, puedes cambiarla */
+    background-color: #000; /* Fondo negro */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-dark {
+    background-color: #000 !important; /* Asegura el fondo negro para la navbar */
+}
+
+.navbar-brand .logo-navbar {
+    height: 100px; /* Tamaño del logo */
+    padding: 3px 8px; /* Espaciado interno del logo */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; /* Texto blanco en la navbar */
+    font-size: 1.3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12 !important; /* Color naranja al pasar el ratón */
+}
+
+.btn-purple {
+    background-color: #5a00ff; /* Color morado del botón "agendar" */
+    border-color: #5a00ff;
+    color: #fff;
+    padding: 0.45rem 1.75rem; /* Padding ajustado */
+    border-radius: 0.5rem;
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+}
+
+.btn-purple:hover {
+    background-color: #f39c12; /* Color de hover que especificaste */
+    border-color: #f39c12; /* Asegura que el borde también cambie */
+    color: #000000; /* Texto oscuro en hover */
+}
+
+/* Hero Section Customizations */
+.hero-section {
+    background-color: #000; /* Fondo negro */
+    min-height: 75vh; /* Altura mínima para que ocupe gran parte de la pantalla */
+    position: relative;
+    overflow: hidden;
+    padding-top: 3rem; /* Espacio superior */
+    padding-bottom: 3rem; /* Espacio inferior */
+    display: flex; /* Para centrar verticalmente el contenido */
+    align-items: center; /* Centra verticalmente */
+}
+
+.hero-section .container-fluid {
+    width: 100%;
+    max-width: 1800px; /* Tu max-width especificado para el contenido */
+    margin-left: auto;
+    margin-right: auto;
+    /* No se usa padding-left/right de 15px aquí porque las columnas ya lo manejan si es necesario */
+}
+
+.hero-section .row {
+    align-items: center; /* Asegura que las filas estén verticalmente centradas dentro del row */
+}
+
+/* Clases para las columnas de la sección hero para control 50/50 */
+.hero-image-col,
+.hero-content-col {
+    padding: 0; /* Remueve el padding por defecto de Bootstrap en las columnas para un control total */
+    display: flex; /* Permite control de alineación interna */
+    flex-direction: column; /* Apila el contenido verticalmente si es necesario */
+    justify-content: center; /* Centra el contenido verticalmente en la columna */
+}
+
+.hero-image-col {
+    order: 1; /* Imagen a la izquierda en pantallas grandes */
+}
+
+.hero-content-col {
+    order: 2; /* Texto a la derecha en pantallas grandes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 4rem; /* Espacio adicional a la izquierda del contenido, ajustable */
+    padding-right: 1rem; /* Un poco de padding a la derecha */
+}
+
+.hero-main-image {
+    max-width: 90%; /* Ajuste del tamaño máximo de la imagen */
+    height: auto;
+    display: block; /* Asegura que la imagen sea un bloque */
+    margin: 0 auto; /* Centra la imagen dentro de su columna */
+}
+
+.hero-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6.5rem; /* Tamaño del título */
+    line-height: 1.2;
+    background: linear-gradient(to right, #e74c3c, #f39c12, #5a00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Necesario para que el gradiente funcione en el texto */
+    margin-bottom: 1.5rem; /* Espacio debajo del título */
+    text-align: center;
+}
+
+.hero-section p.lead {
+    font-size: 1.6rem; /* Tamaño del texto del párrafo */
+    max-width: 900px; /* Limita el ancho del párrafo */
+    color: #ccc; /* Color de texto más claro */
+    line-height: 1.6; /* Mejora la legibilidad */
+    margin-bottom: 2rem; /* Espacio debajo del párrafo */
+    margin-left: 0; /* Asegura alineación a la izquierda */
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn-warning {
+    background-color: #f39c12 !important;
+    border-color: #f39c12 !important;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* Asegúrate de que no haya 'margin-left', 'margin-right' o 'width' aquí */
+}
+
+.btn-warning:hover {
+    background-color: #5a00ff!important;
+    border-color: #5a00ff !important;
+    color: #fff !important;
+}
+
+/* Footer Customizations */
+.footer-purple {
+    background-color: #5a00ff !important; /* Fondo morado para el footer */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-purple h5 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-purple ul {
+    padding-left: 0;
+}
+
+.footer-purple li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-purple a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease; /* Transición suave para el hover */
+}
+
+.footer-purple a:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        min-height: auto; /* Altura automática para móviles */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Columnas en móviles ocupan todo el ancho y se centran */
+    .hero-image-col,
+    .hero-content-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 1rem; /* Añade padding a las columnas en móviles */
+        text-align: center; /* Centra el contenido en móviles */
+    }
+
+    .hero-image-col {
+        order: 2; /* La imagen debajo del texto en móviles */
+    }
+
+    .hero-content-col {
+        order: 1; /* El texto encima de la imagen en móviles */
+        padding-left: 1rem; /* Ajusta el padding para móviles */
+        padding-right: 1rem;
+    }
+
+    .hero-main-image {
+        max-width: 70%; /* Ajusta el tamaño de la imagen en móviles */
+        margin: 0 auto; /* Asegura el centrado en móviles */
+    }
+
+    .hero-title {
+        font-size: 2.8rem; /* Ajuste del tamaño del título para móviles */
+        margin-bottom: 1rem;
+        text-align: center; /* Asegura centrado del título en móviles */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-section p.lead {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center; /* Asegura centrado del párrafo en móviles */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-warning {
+        width: fit-content; /* Sigue ajustando el ancho al contenido */
+        margin-left: auto; /* Centra el botón en móviles */
+        margin-right: auto;
+        display: block; /* Para que margin auto funcione */
+    }
+
+    .navbar-collapse {
+        background-color: #1a1a1a; /* Fondo para el menú colapsado */
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+/*para lo del mensaje des contactanos*/
+project-card,
+.team-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estilo final cuando la tarjeta ya es visible */
+.project-card.is-visible,
+.team-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
